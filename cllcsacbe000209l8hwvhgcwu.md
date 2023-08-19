@@ -10,7 +10,7 @@ tags: javascript, development, workflow, web-development
 
 You folks have been writing javascript code for a long but have you wondered how javascript works? What happens when you write a small program, and how does that get executed?
 
-**<mark>Javascript is a single-threaded language but works as an asynchronous. Wait! what do you mean by single-threaded and asynchronous? A single thread means there is only one thread and one task can be executed at a time. So how javascript can be asynchronous?</mark>**
+**<mark>Javascript is a single-threaded language but asynchronous in nature. Wait! what do you mean by single-threaded and asynchronous? A single thread means there is only one thread and one task can be executed at a time. So how javascript can be asynchronous?</mark>**
 
 It might sound strange to you, but in this blog, we will understand how javascript works in-depth and you can understand why I said the above statement.  
 So before starting let's do a quick exercise.
