@@ -10,7 +10,7 @@ tags: javascript, development, workflow, web-development
 
 You folks have been writing javascript code for a long but have you wondered how javascript works? What happens when you write a small program, and how does that get executed?
 
-**<mark>Javascript is a single-threaded, asynchronous language. Wait! what do you mean by single-threaded asynchronous? A single thread means there is only one thread and one task can be executed at a time. So how javascript can be asynchronous?</mark>**
+**<mark>Javascript is a single-threaded language but works as an asynchronous. Wait! what do you mean by single-threaded and asynchronous? A single thread means there is only one thread and one task can be executed at a time. So how javascript can be asynchronous?</mark>**
 
 It might sound strange to you, but in this blog, we will understand how javascript works in-depth and you can understand why I said the above statement.  
 So before starting let's do a quick exercise.
@@ -114,7 +114,7 @@ Web APIs are a set of functions provided by the browser that the JavaScript engi
 
 ### CallBack Queue
 
-As we have talked async operations are get executed in a separate environment. Now what happens next when the waiting time gets over? It doesn't know what to do now. Now callback queue handles everything after this. It's a normal queue-type data structure, which works as FIFO (First In First Out). Assume there are two async operations.  
+As we have talked async operations are get executed in a separate environment. Now what happens next when the waiting time gets over? It doesn't know what to do now. Now callback queue handles everything after this. It's a normal queue-type data structure, which works as FIFO (First In First Out). Assume there are two async operations.
 
 ```javascript
 setTimeOut(()=>{
@@ -149,7 +149,7 @@ Javascript is a vast topic, but I hope I am able to clear a little bit of how ja
 This is in short whatever we have learned till now.
 
 Now let's get back to the very first question I asked you, folks.  
-Adding the question again for you.  
+Adding the question again for you.
 
 ```bash
 console.log("a");
@@ -173,9 +173,9 @@ console.log("d");
 From the above diagram, you can understand that at very first console.log('a') gets inserted into the call stack and gets executed and pops out. Then setTimeOut goes to web APIs as well as the promise. Then console.log('d') gets into the call stack and gets executed and pops out.  
 Then both setTimeout and promise's time get over and they came out. setTimeOut goes into the call back queue and promise goes into the job queue.  
 Now event loop check call stack is empty and gives priority to the job queue. So, console.log('c') gets inserted in the call stack and gets executed.  
-At the very end console.log('b') gets inserted into the call stack and gets executed.  
-  
-so the output looks like this  
+At the very end console.log('b') gets inserted into the call stack and gets executed.
+
+so the output looks like this
 
 ```bash
 a
